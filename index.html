@@ -1,218 +1,223 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Beatologia - Oficjalna Strona</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    body {
-      background: linear-gradient(to bottom, #FFFFFF 85%, #CCCCCC 100%);
-      color: #2A4A7B;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    .baner-container {
-      position: relative;
-      width: 100%;
-      height: 140px;
-      margin-top: 20px;
-    }
-
-.baner-container img.baner {
-  width: 1100px; /* ← możesz zmienić na 100%, 800px itd. */
-  height: 200px;
-  object-fit: cover;
+<meta charset="UTF-8">
+<title>Beatologia - Oficjalna Strona</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+body {
+background: linear-gradient(to bottom, #FFFFFF 85%, #CCCCCC 100%);
+color: #2A4A7B;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
 }
 
-    marquee {
-      font-family: 'Times New Roman', Times, serif;
-      color: #2A4A7B;
-      font-size: 18px;
-      margin-top: 10px;
-    }
+.baner-container {
+width: 100%;
+text-align: center;
+margin-top: 20px;
+}
 
-    .naglowek {
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 20px;
-      font-weight: normal;
-      margin-top: 30px;
-      margin-bottom: 0;
-    }
+.baner-container img.baner {
+width: 100%;
+max-width: 1100px;
+height: auto;
+display: block;
+margin: 0 auto;
+}
 
-    table {
-      margin: auto;
-      border: 2px outset #8CB4E8;
-      background-color: #F0F8FF;
-      color: #000000;
-      width: 50%;
-      border-collapse: collapse;
-    }
+marquee {
+font-family: 'Times New Roman', Times, serif;
+color: #2A4A7B;
+font-size: 18px;
+margin-top: 10px;
+text-align: center;
+}
 
-    td {
-      padding: 10px;
-      border: 1px inset #8CB4E8;
-      vertical-align: middle;
-    }
+.albums-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+justify-items: center;
+width: 100%;
+max-width: 1100px;
+margin: 40px auto;
+}
 
-    td.album {
-      width: 80%;
-      text-align: left;
-      font-family: 'Ink Free', cursive;
-      font-size: 18px;
-    }
+@media (max-width: 900px) {
+.albums-container {
+grid-template-columns: repeat(2, 1fr);
+}
+}
 
-    td.download {
-      width: 20%;
-    }
+@media (max-width: 600px) {
+.albums-container {
+grid-template-columns: repeat(1, 1fr);
+}
+}
 
-    td.kontakt {
-      color: #00008B;
-      font-size: 16px;
-    }
+.album-entry {
+width: 250px;
+text-align: center;
+}
 
-    a {
-      color: #0000CC;
-      text-decoration: underline;
-    }
+.album-entry img.cover {
+width: 250px;
+height: 250px;
+object-fit: cover;
+border: 1px solid #999;
+display: block;
+margin-bottom: 10px;
+}
 
-    .opis {
-      width: 60%;
-      margin: 30px auto;
-      text-align: left;
-      font-size: 16px;
-      line-height: 1.6;
-    }
+.album-title {
+font-family: 'Ink Free', cursive;
+font-size: 20px;
+margin-bottom: 10px;
+color: #000;
+}
 
-    .opis-naglowek {
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 20px;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
-  </style>
+.download-btn img {
+width: 80px;
+}
+
+.opis {
+width: 100%;
+margin: 30px auto;
+text-align: center;
+font-size: 16px;
+line-height: 1.6;
+}
+
+.opis-naglowek {
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+center a {
+color: #0000CC;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="baner-container">
-    <img src="beatologia.png" alt="Beatologia Banner" class="baner">
-  </div>
-<br><br><br>
-  <marquee behavior="scroll" direction="left">Witaj na oficjalnej stronie kolektywu Beatologia!</marquee>
+<div class="baner-container">
+<img src="beatologia.png" alt="Beatologia Banner" class="baner">
+</div>
 
-    <div class="naglowek">Albumy:</div>
-  <table>
-    <tr>
-      <td class="album">Nixon MZR - Nixon Przedstawia (2023)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/fr1ufub83sj7bhk/nixon+przedstawia.zip/file" target="_blank">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td class="album">Nixon MZR - Szczery Rap (2023)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/mzwsuc17sh7mr8n/szczery_rap.zip/file" target="_blank">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td class="album">Nixon MZR - Zawrót Głowy (2023)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/02ztxzc8atdc1f9/zawrot_glowy.zip/file" target="_blank">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td class="album">Nixon MZR - Monotematyka (2025)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/vexdkibuhl4zul8/monotematyka.zip/file" target="_blank">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td class="album">Sketuk - PsychoMania (2025)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/vulorwkmdrkjjn2/psychomania.zip/file">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-  </table>
 
-  <div class="naglowek">EP/Single:</div>
-  <table>
-    <tr>
-      <td class="album">Nixon MZR - N.M.C (Singiel) (2022)</td>
-      <td class="download"></td>
-    </tr>
-    <tr>
-      <td class="album">Nixon MZR - Zła strona Alfreda Hitchcocka EP (2023)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/20ycw4q956b6qg9/zla_strona_alfreda_hitchcocka.zip/file" target="_blank">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td class="album">Nixon MZR - Cena Dobrego Imienia EP (2023)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/56gff7vowmzvo1d/cena_dobrego_imienia.zip/file" target="_blank">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td class="album">Nixon MZR - Czas Krwi (Singiel) (2026)</td>
-      <td class="download">
-        <a href="https://www.mediafire.com/file/45q199ir0b5ej8g/czas+krwi.zip/file" target="_blank">
-          <img src="downloadbutton.png" alt="Pobierz" width="80">
-        </a>
-      </td>
-    </tr>
-  </table>
 
-  <div class="naglowek">Kontakt:</div>
-  <table>
-    <tr>
-      <td class="kontakt">Kontakt: <a href="mailto:beatologia@op.pl">beatologia@op.pl</a></td>
-    </tr>
-  </table>
 
-  <div class="opis">
-    <p class="opis-naglowek">O składzie:</p>
-    <p>
-      Beatologia to kolektyw Hip-Hopowy założony przez Gdańskiego rapera Nixona MZR 4 listopada 2022 roku, początkowo pod nazwą Nixon Records. W skład grupy wchodzi Nixon MZR, Sketuk, Polswert (PouPou) oraz Orek. Nixon MZR razem z Orkiem założyli również zespół Modus Operandi.
-    </p>
-  </div>
+<br>
+<br>
+<br>
+<br>
 
-  <center>
-    <p>
-      <a href="https://www.youtube.com/@beatologia_squad" target="_blank">Beatologia na YouTube</a> |
-      <a href="https://discord.com/invite/9S3JdTPmvj" target="_blank">Oficjalny Discord Beatologii</a>
-    </p>
-  </center>
 
-  <div class="opis">
-    <p class="opis-naglowek">Info:</p>
-    <p>
-      Jesteś raperem i chciałbyś do nas dołączyć? Oto co trzeba zrobić, aby zostać członkiem Beatologia Squad:<br>
-      Napisz do mnie (Nixon MZR) na Discordzie, Instagramie lub na mailu o chęć dołączenia i zobaczę co da się zrobić :)<br><br>
-      
-      Oczywiście jeśli nie jesteś raperem, to tak samo zapraszamy na nasz serwer Discord, ponieważ mamy tam również specjalne kanały stworzone typowo dla słuchaczy :)
-    </p>
-  </div>
 
-  <hr>
-  <center>
-    <font face="Courier New" size="3" color="#2A4A7B">© Beatologia Squad 2001 (no dobra... 2026)</font>
-  </center>
+
+<div class="albums-container">
+
+<div class="album-entry">
+<img src="nxnprzedstawia.png" class="cover">
+<div class="album-title">Nixon MZR - Nixon Przedstawia (2023)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/fr1ufub83sj7bhk/nixon+przedstawia.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+<div class="album-entry">
+<img src="szczeryrap.png" class="cover">
+<div class="album-title">Nixon MZR - Szczery Rap (2023)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/mzwsuc17sh7mr8n/szczery_rap.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+<div class="album-entry">
+<img src="zawrotglowy.png" class="cover">
+<div class="album-title">Nixon MZR - Zawrót Głowy (2023)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/02ztxzc8atdc1f9/zawrot_glowy.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+<div class="album-entry">
+<img src="monotematyka.png" class="cover">
+<div class="album-title">Nixon MZR - Monotematyka (2025)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/vexdkibuhl4zul8/monotematyka.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+<div class="album-entry">
+<img src="psychomania.png" class="cover">
+<div class="album-title">Sketuk - PsychoMania (2025)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/vulorwkmdrkjjn2/psychomania.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+<div class="album-entry">
+<img src="nmc.png" class="cover">
+<div class="album-title">Nixon MZR - N.M.C (2022)</div>
+</div>
+
+<div class="album-entry">
+<img src="zlastrona.png" class="cover">
+<div class="album-title">Nixon MZR - Zła Strona Alfreda Hitchcocka EP (2023)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/20ycw4q956b6qg9/zla_strona_alfreda_hitchcocka.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+<div class="album-entry">
+<img src="cenaimienia.png" class="cover">
+<div class="album-title">Nixon MZR - Cena Dobrego Imienia EP (2023)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/56gff7vowmzvo1d/cena_dobrego_imienia.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+<div class="album-entry">
+<img src="czaskrwi.png" class="cover">
+<div class="album-title">Nixon MZR - Czas Krwi (2026)</div>
+<a class="download-btn" href="https://www.mediafire.com/file/45q199ir0b5ej8g/czas+krwi.zip/file" target="_blank">
+<img src="downloadbutton.png" alt="Pobierz">
+</a>
+</div>
+
+</div>
+
+
+
+
+<div class="opis">
+<p class="opis-naglowek">O składzie:</p>
+Beatologia to kolektyw Hip-Hopowy założony przez Gdańskiego rapera Nixona MZR 4 listopada 2022 roku, początkowo pod nazwą Nixon Records.
+<br>
+W skład grupy wchodzi Nixon MZR, Sketuk, Polswert (PouPou) oraz Orek. Nixon MZR i Orek założyli również zespół Modus Operandi.
+</div>
+
+<center>
+<p>
+<a href="https://www.youtube.com/@beatologia_squad" target="_blank">Beatologia na YouTube</a> |
+<a href="https://discord.com/invite/9S3JdTPmvj" target="_blank">Oficjalny Discord Beatologii</a>
+</p>
+</center>
+
+<div class="opis">
+<p class="opis-naglowek">Info:</p>
+Jesteś raperem i chciałbyś do nas dołączyć? Napisz do mnie (Nixon MZR) na Discordzie, Instagramie lub na maila beatologia@op.pl
+</div>
+
+<hr>
+<center>
+<font face="Courier New" size="3" color="#2A4A7B">© Beatologia Squad 2001 (no dobra... 2026)</font>
+</center>
 <hr>
 
 </body>
